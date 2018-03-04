@@ -1,0 +1,50 @@
+{
+  "name": "@dkundel/setup",
+  "version": "1.0.0",
+  "description": "Enter Description",
+  "main": "src/index.js",
+  "bin": "bin/setup.sh",
+  "scripts": {
+    "contrib:generate": "all-contributors generate",
+    "contrib:add": "all-contributors add",
+    "start": "node .",
+    "dev": "nodemon src/index.js --exec nodenv",
+    "lint": "eslint \"!(node_modules)/**/*.js\"",
+    "pretest": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkundel/about-json.git"
+  },
+  "keywords": [
+    "project-templates"
+  ],
+  "author": "Dominik Kundel <dominik.kundel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dkundel/about-json/issues"
+  },
+  "homepage": "https://github.com/dkundel/about-json#readme",
+  "devDependencies": {
+    "all-contributors-cli": "^4.10.1",
+    "eslint": "^4.18.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "node-env-run": "^2.0.1",
+    "nodemon": "^1.15.0",
+    "prettier": "^1.10.2"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ]
+  },
+  "files": [
+    "bin/"
+  ]
+}
