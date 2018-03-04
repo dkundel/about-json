@@ -1,14 +1,18 @@
 {
-  "name": "@dkundel/setup",
+  "name": "@dkundel/about-json",
   "version": "1.0.0",
   "description": "Enter Description",
-  "main": "src/index.js",
-  "bin": "bin/setup.sh",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "bin": "bin/about-json.js",
   "scripts": {
     "contrib:generate": "all-contributors generate",
     "contrib:add": "all-contributors add",
-    "start": "node .",
-    "dev": "nodemon src/index.js --exec nodenv",
+    "start": "npm run dev",
+    "dev": "microbundle watch",
+    "build": "microbundle build",
     "lint": "eslint \"!(node_modules)/**/*.js\"",
     "pretest": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +22,6 @@
     "url": "git+https://github.com/dkundel/about-json.git"
   },
   "keywords": [
-    "project-templates"
   ],
   "author": "Dominik Kundel <dominik.kundel@gmail.com>",
   "license": "MIT",
@@ -35,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
+    "microbundle": "^0.4.4",
     "node-env-run": "^2.0.1",
     "nodemon": "^1.15.0",
     "prettier": "^1.10.2"
@@ -45,6 +49,7 @@
     ]
   },
   "files": [
-    "bin/"
+    "bin/",
+    "dist/"
   ]
 }
