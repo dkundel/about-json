@@ -1,4 +1,4 @@
-#!/bin/node
+#! /usr/bin/env node
 import { resolve } from 'path';
 import { promisify } from 'util';
 import { readFile as fsReadFile, writeFile as fsWriteFile } from 'fs';
