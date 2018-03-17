@@ -2,19 +2,42 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![Code of Conduct](https://img.shields.io/badge/%F0%9F%92%96-Code%20of%20Conduct-ff69b4.svg?style=flat-square)](code-of-conduct.md)
 
-# Project Templates
+# `about-json`
 
-This project contains a collection of different project setups. The project has two purposes. The [`package.json`](package.json) contains the dependencies for the template but it also defines the setup script that is published to [`npm`](https://npm.im/@dkundel/setup) to set up the project.
+This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files [like this one](https://github.com/dkundel/about-me) into a JSON structure for more flexible rendering.
 
-The templates are defined in the separate branches of this project. Currently there are the following templates:
-
-* [`master`](/tree/master) - The _default_ value. It sets up a basic Node.js project without any special features except linting
+It can read files locally or load them from the web.
 
 ## Setup
 
 ```bash
-npx @dkundel/setup project-name template-branch-name
-cd project-name
+npx about-json -i https://raw.githubusercontent.com/dkundel/about-me/master/README.md --pretty
+
+# OR
+
+npm i -g about-json
+about-json -i https://raw.githubusercontent.com/dkundel/about-me/master/README.md --pretty
+```
+
+## Usage
+
+```bash
+Turns a markdown file into a JSON. Opinionated based on the about-me file
+format.
+Usage: about-json -i <filePathOrUrl>
+
+Options:
+  --input, -i   File path or URL to load markdown            [string] [required]
+  --output, -o  File path to write output. Will write to stdout otherwise.
+                                                                        [string]
+  --html        Output inline content (such as links) as HTML rather than
+                Markdown                              [boolean] [default: false]
+  --pretty      Prints the resulting JSON in an indented way instead of
+                condensed                             [boolean] [default: false]
+  --fixUrl, -u  If the content is fetched from the web, it will update the
+                relative links to absolute URLs        [boolean] [default: true]
+  --help        Show help                                              [boolean]
+  --version     Show version number                                    [boolean]
 ```
 
 ## Contributing

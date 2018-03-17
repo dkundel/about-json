@@ -1,28 +1,30 @@
 {
-  "name": "@dkundel/about-json",
+  "name": "about-json",
   "version": "1.0.0",
-  "description": "Enter Description",
+  "description":
+    "This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files into JSON.",
   "source": "src/index.js",
   "main": "dist/index.js",
-  "umd:main": "dist/index.umd.js",
-  "module": "dist/index.m.js",
-  "bin": "bin/about-json.js",
+  "types": "dist/index.d.ts",
+  "bin": { "about-json": "dist/bin.js" },
   "scripts": {
     "contrib:generate": "all-contributors generate",
     "contrib:add": "all-contributors add",
-    "start": "npm run dev",
-    "dev": "microbundle watch",
-    "build": "microbundle build",
-    "lint": "eslint \"!(node_modules)/**/*.js\"",
+    "start": "npm run example",
+    "build": "npm run tsc",
+    "tsc": "tsc",
+    "dev": "npm run tsc -- --watch",
+    "lint": "eslint \"!(node_modules)/**/*.ts\"",
     "pretest": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example": "ts-node example/basic.ts",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dkundel/about-json.git"
   },
-  "keywords": [
-  ],
+  "keywords": ["json", "markdown", "about-me"],
   "author": "Dominik Kundel <dominik.kundel@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -38,18 +40,31 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
-    "microbundle": "^0.4.4",
-    "node-env-run": "^2.0.1",
-    "nodemon": "^1.15.0",
-    "prettier": "^1.10.2"
+    "eslint-plugin-typescript": "^0.10.0",
+    "prettier": "^1.10.2",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2",
+    "typescript-eslint-parser": "^14.0.0"
   },
-  "nodemonConfig": {
-    "watch": [
-      "src"
-    ]
-  },
-  "files": [
-    "bin/",
-    "dist/"
-  ]
+  "files": ["dist/", "README.md", "code-of-conduct.md", "LICENSE"],
+  "dependencies": {
+    "@types/common-tags": "^1.4.0",
+    "@types/dot-prop": "^4.2.0",
+    "@types/got": "^7.1.8",
+    "@types/lodash.camelcase": "^4.3.3",
+    "@types/lodash.merge": "^4.6.3",
+    "@types/markdown-it": "0.0.4",
+    "@types/marked": "^0.3.0",
+    "@types/yargs": "^11.0.0",
+    "common-tags": "^1.7.2",
+    "dot-prop": "^4.2.0",
+    "eazy-logger": "^3.0.2",
+    "got": "^8.3.0",
+    "lodash": "^4.17.5",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.merge": "^4.6.1",
+    "markdown-it": "^8.4.1",
+    "marked": "^0.3.17",
+    "yargs": "^11.0.0"
+  }
 }
