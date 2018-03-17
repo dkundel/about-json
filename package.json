@@ -1,12 +1,13 @@
 {
   "name": "about-json",
-  "version": "1.0.0",
-  "description":
-    "This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files into JSON.",
+  "version": "1.0.1",
+  "description": "This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files into JSON.",
   "source": "src/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "bin": { "about-json": "dist/bin.js" },
+  "bin": {
+    "about-json": "dist/bin.js"
+  },
   "scripts": {
     "contrib:generate": "all-contributors generate",
     "contrib:add": "all-contributors add",
@@ -24,7 +25,11 @@
     "type": "git",
     "url": "git+https://github.com/dkundel/about-json.git"
   },
-  "keywords": ["json", "markdown", "about-me"],
+  "keywords": [
+    "json",
+    "markdown",
+    "about-me"
+  ],
   "author": "Dominik Kundel <dominik.kundel@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -46,7 +51,12 @@
     "typescript": "^2.7.2",
     "typescript-eslint-parser": "^14.0.0"
   },
-  "files": ["dist/", "README.md", "code-of-conduct.md", "LICENSE"],
+  "files": [
+    "dist/",
+    "README.md",
+    "code-of-conduct.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "@types/common-tags": "^1.4.0",
     "@types/dot-prop": "^4.2.0",
