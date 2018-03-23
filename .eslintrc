@@ -1,9 +1,18 @@
 {
   "parser": "typescript-eslint-parser",
-  "plugins": ["typescript"],
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "plugins": ["typescript", "jest"],
+  "extends": [
+    "airbnb",
+    "typescript",
+    "plugin:prettier/recommended",
+    "typescript/prettier"
+  ],
   "rules": {
-    "import/extension": 0,
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "typescript/no-unused-vars": "error",
     "prettier/prettier": [
       "error",
       {
@@ -11,6 +20,19 @@
         "trailingComma": "es5"
       }
     ],
-    "prefer-const": "error"
+    "prefer-const": "error",
+    "valid-jsdoc": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/__tests__/**/*.ts"],
+      "rules": {
+        "require-jsdoc": "off"
+      }
+    }
+  ],
+  "env": {
+    "jest/globals": true,
+    "node": true
   }
 }
