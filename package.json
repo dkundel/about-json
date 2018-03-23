@@ -1,6 +1,6 @@
 {
   "name": "about-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files into JSON.",
   "source": "src/index.js",
   "main": "dist/index.js",
