@@ -74,13 +74,15 @@ const opts = yargs
   .version()
   .parse() as CommandLineOptions;
 
-run(opts).catch(err => {
-  console.error(err);
-});
-
-async function run(opts: CommandLineOptions) {
+/**
+ * Fetches the data (from disk or file) and parses to an object
+ * and outputs it depending on the output target
+ * @param opts The options passed as command-line arguments
+ * @returns A Promise resolving when the task is done
+ */
+async function run(opts: CommandLineOptions): Promise<void> {
   let content: string;
-  let isFromWeb = isWebContent(opts.input);
+  const isFromWeb = isWebContent(opts.input);
   if (isFromWeb) {
     const resp = await got(opts.input);
     if (resp.statusCode !== 200 || !resp.body) {
@@ -114,3 +116,7 @@ async function run(opts: CommandLineOptions) {
   await writeFile(path, outputData, 'utf8');
   logger.log('Wrote output to {cyan:%s} 🎉', path);
 }
+
+run(opts).catch(err => {
+  console.error(err);
+});
