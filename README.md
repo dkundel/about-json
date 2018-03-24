@@ -1,9 +1,9 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![Code of Conduct](https://img.shields.io/badge/%F0%9F%92%96-Code%20of%20Conduct-ff69b4.svg?style=flat-square)](code-of-conduct.md)
-[![about-json downloads](https://img.shields.io/npm/dt/about-json.svg)](https://npm.im/about-json)
-[![about-json version](https://img.shields.io/npm/v/about-json.svg)](https://npm.im/about-json)
-[![Travis](https://img.shields.io/travis/dkundel/about-json.svg)](https://travis-ci.org/dkundel/about-json)
+[![about-json downloads](https://img.shields.io/npm/dt/about-json.svg?style=flat-square)](https://npm.im/about-json)
+[![about-json version](https://img.shields.io/npm/v/about-json.svg?style=flat-square)](https://npm.im/about-json)
+[![Travis](https://img.shields.io/travis/dkundel/about-json.svg?style=flat-square)](https://travis-ci.org/dkundel/about-json)
 
 # `about-json`
 
