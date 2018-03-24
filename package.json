@@ -1,7 +1,8 @@
 {
   "name": "about-json",
   "version": "1.0.2",
-  "description": "This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files into JSON.",
+  "description":
+    "This is an opinionated Markdown to JSON converter. It was designed to turn `about-me` markdown files into JSON.",
   "source": "src/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,17 +20,16 @@
     "pretest": "npm run lint",
     "test": "jest",
     "example": "ts-node example/basic.ts",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release:patch": "npm version patch -m \":bookmark: Release v%s\"",
+    "release:minor": "npm version minor -m \":bookmark: Release v%s\"",
+    "release:major": "npm version major -m \":bookmark: Release v%s\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dkundel/about-json.git"
   },
-  "keywords": [
-    "json",
-    "markdown",
-    "about-me"
-  ],
+  "keywords": ["json", "markdown", "about-me"],
   "author": "Dominik Kundel <dominik.kundel@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -58,12 +58,7 @@
     "typescript": "^2.7.2",
     "typescript-eslint-parser": "^14.0.0"
   },
-  "files": [
-    "dist/",
-    "README.md",
-    "code-of-conduct.md",
-    "LICENSE"
-  ],
+  "files": ["dist/", "README.md", "code-of-conduct.md", "LICENSE"],
   "dependencies": {
     "@types/common-tags": "^1.4.0",
     "@types/dot-prop": "^4.2.0",
@@ -89,13 +84,6 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   }
 }
